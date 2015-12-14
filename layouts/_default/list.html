@@ -2,7 +2,6 @@
 
 <div id="container">
     <div class="outer">
-        {{ partial "profile" . }}
         <section id="main">
             <section class="archives-wrap">
                 <div class="archive-category-wrap">
@@ -11,7 +10,7 @@
                 <div class="archives">
                     {{ $paginator := .Paginate .Data.Pages }}
                     {{ range $paginator.Pages }}
-                        {{ .Render "summary" }} 
+                        {{ .Render "summary" }}
                     {{ end }}
                 </div>
             </section>
